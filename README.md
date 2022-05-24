@@ -6,7 +6,7 @@
 * https://github.com/yk-jp/expense-tracker-backend
 
 # What brings us to build up the app? 
-I was interested in how a database should be designed to keep maintainable and scalable. I've personally been tracking my expense with a mobile app and it got me thinking that this app seemes similar to SNS app in terms of how data registered and accumulated by users has to be persisted day to day basis. 
+I was interested in how a database should be designed to keep maintainable and scalable because users could hold transactions data a long time ago.
 
 # Project Member
 
