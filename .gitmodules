@@ -1,0 +1,6 @@
+[submodule "expense-tracker-backend"]
+	path = expense-tracker-backend
+	url = https://github.com/yk-jp/expense-tracker-backend
+[submodule "expense-tracker-frontend"]
+	path = expense-tracker-frontend
+	url = https://github.com/yk-jp/expense-tracker-frontend
