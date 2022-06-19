@@ -1,0 +1,52 @@
+version: "3.8"
+services:
+  expense-tracker-frontend:
+    # restart: always
+    build:
+     context: ./expense-tracker-frontend
+     dockerfile: Dockerfile
+    image: expense-tracker-frontend
+    stdin_open: true
+    container_name: expense-tracker-frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./expense-tracker-frontend/src:/app/src
+    depends_on:
+      - expense-tracker-backend
+    command: npm run start 
+  expense-tracker-backend:
+    # restart: always
+    build:
+     context: ./expense-tracker-backend
+     dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./expense-tracker-backend:/app
+    image: expense-tracker-backend 
+    container_name: expense-tracker-backend
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - mongodb
+      - redis
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - 27018:27017
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+    container_name: mongodb
+  redis: 
+    image: redis:7.0
+    volumes:
+      - redis-data:/data/cache
+    ports:
+      - 3679:3679
+    container_name: redis
+volumes:
+  mongo-data:
+    driver: local
+  redis-data:
+    driver: local
