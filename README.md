@@ -17,6 +17,7 @@ I was interested in how database should be designed to keep maintainable and sca
 ### Frontend
 
 - @https://github.com/Tomo-ja
+- @https://github.com/YIshihara11201
 
 ### Backend
 
