@@ -1,0 +1,5 @@
+make: Entering directory `/Users/yusukek/code/expense-tracker'
+make: Leaving directory `/Users/yusukek/code/expense-tracker'
+ 
+Makefile:20: *** missing separator.  Stop.
+

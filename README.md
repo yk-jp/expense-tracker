@@ -8,10 +8,6 @@
 
 - https://github.com/yk-jp/expense-tracker-backend
 
-# What brought us to build up the app?
-
-I was interested in how database should be designed to keep maintainable and scalable because users could hold transactions data from a long time ago.
-
 # Project Member
 
 ### Frontend

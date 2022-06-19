@@ -1,0 +1,1 @@
+{"buildTargets":["build","clean-c-all","clean-i-all","clean-v-all","run","stop"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
