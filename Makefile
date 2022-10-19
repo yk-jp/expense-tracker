@@ -17,7 +17,7 @@ clean-i-all:
 	$(FRONT_MAKE) clean-i ; $(BACK_MAKE) clean-i-all
 
 clean-v-all:
-  $(BACK_MAKE) clean-v-all
+	$(BACK_MAKE) clean-v-all
 
 # remove all volumes including unused volumes in this project
 clean-v-all-1:
