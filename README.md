@@ -26,7 +26,17 @@ run a docker file
 make run
 ```
 
-### You can see collections in mongodb database at ```localhost:27018```
+You can see collections in mongodb database at 
+```
+localhost:27018
+```
+
+open 
+ ```
+ http://localhost:3000
+ ```
+
+<br>
 
 # Project Member
 
