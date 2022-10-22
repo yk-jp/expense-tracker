@@ -2,7 +2,7 @@ FRONT_MAKE=cd expense-tracker-frontend && $(MAKE)
 BACK_MAKE=cd expense-tracker-backend && $(MAKE)
 
 build:
-	docker-coompose build -f docker-compose.yml .
+	docker-compose build 
 
 run:
 	docker-compose -f docker-compose.yml up
@@ -67,9 +67,6 @@ clean-i-redis:
 
 clean-i-mongodb:
 	$(BACK_MAKE) clean-i-mongodb
-
-clean-i-all:
-	$(BACK_MAKE) clean-i-django ; $(BACK_MAKE) clean-i-mongodb ; $(BACK_MAKE) clean-i-redis
 
 # clean image forcefully
 clean-if-django:

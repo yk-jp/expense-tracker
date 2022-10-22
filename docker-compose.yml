@@ -20,6 +20,7 @@ services:
     build:
      context: ./expense-tracker-backend
      dockerfile: Dockerfile
+    entrypoint: sh /app/docker-entrypoint.sh 
     ports:
       - 8000:8000
     volumes:
