@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   expense-tracker-frontend:
-    # restart: always
+    restart: unless-stopped
     build:
      context: ./expense-tracker-frontend
      dockerfile: Dockerfile
@@ -14,20 +14,17 @@ services:
       - ./expense-tracker-frontend/src:/app/src
     depends_on:
       - expense-tracker-backend
-    command: npm run start 
   expense-tracker-backend:
-    # restart: always
+    restart: unless-stopped
     build:
      context: ./expense-tracker-backend
      dockerfile: Dockerfile
-    entrypoint: sh /app/docker-entrypoint.sh 
     ports:
       - 8000:8000
     volumes:
       - ./expense-tracker-backend:/app
     image: expense-tracker-backend 
     container_name: expense-tracker-backend
-    command: python manage.py runserver 0.0.0.0:8000
     depends_on:
       - mongodb
       - redis
@@ -35,12 +32,13 @@ services:
     image: mongo:5.0
     ports:
       - 27018:27017
-    restart: always
+    restart: unless-stopped
     volumes:
       - mongo-data:/data/db
     container_name: mongodb
   redis: 
     image: redis:7.0
+    restart: unless-stopped
     volumes:
       - redis-data:/data/cache
     ports:
