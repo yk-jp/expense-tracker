@@ -2,10 +2,17 @@ FRONT_MAKE=cd expense-tracker-frontend && $(MAKE)
 BACK_MAKE=cd expense-tracker-backend && $(MAKE)
 
 build:
-	docker-compose build 
+	docker-compose build
+
+build-prod:
+	$(FRONT_MAKE) build-prod
+	$(BACK_MAKE) build-prod 
 
 run:
 	docker-compose -f docker-compose.yml up
+
+run-prod:
+	docker-compose -f docker-compose.prod.yml up
 
 stop:
 	docker-compose -f docker-compose.yml down
