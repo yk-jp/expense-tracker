@@ -1,5 +1,21 @@
 # expense-tracker
 
+<img align="center" src="./img/expenseTracker.png" alt="image" />
+
+<br>
+
+# Architecture
+
+<img align="center" src="./img/expenseTrackerDesign.png" alt="image" />
+
+<br>
+
+# What We learned
+
+The app was developed for learning purposes.
+If you have any suggestions or reviews, please message me!
+I want to learn more about how to design the architecture optimally and how code can be improved!
+
 ### frontend repo
 
 - https://github.com/yk-jp/expense-tracker-frontend
@@ -66,6 +82,12 @@ open
 - Redis
 - MongoDB
 - Docker
+- Gunicorn
+- Nginx
+
+### Deployment
+
+- AWS EC2
 
 ### Testing
 
