@@ -10,7 +10,7 @@
 
 <br>
 
-# What We learned
+# What we learned
 
 The app was developed for learning purposes.
 If you have any suggestions or reviews, please message me!
@@ -36,7 +36,10 @@ move to the root dir
 cd expense-tracker
 ```
 
-run a docker file
+Before running a docker compose, 
+go to the frontend and backend repos, updating `.env.tmplate` and `.env.template.docker` to `.env` for each.
+
+run a docker file in a root dir(`expense-tracker`)
 
 ```
 make run
