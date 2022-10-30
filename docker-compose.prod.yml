@@ -1,0 +1,61 @@
+version: "3.8"
+services:
+  nginx:
+    restart: unless-stopped
+    image: nginx:1.23.2-alpine
+    ports: 
+      - 80:8080
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - expense-tracker-frontend-build:/var/www/expense-tracker-frontend
+    container_name: nginx-prod
+    depends_on:
+      - expense-tracker-frontend
+      - expense-tracker-backend
+  expense-tracker-frontend:
+    build:
+     context: ./expense-tracker-frontend
+     dockerfile: Dockerfile.prod
+    image: expense-tracker-frontend-prod
+    container_name: expense-tracker-frontend-prod
+    volumes:
+      - expense-tracker-frontend-build:/app/build
+    # ports:
+    #   - 80:8080
+    depends_on:
+      - expense-tracker-backend
+  expense-tracker-backend:
+    restart: unless-stopped
+    build:
+     context: ./expense-tracker-backend
+     dockerfile: Dockerfile.prod
+    ports:
+      - 8000:8000
+    image: expense-tracker-backend-prod
+    container_name: expense-tracker-backend-prod
+    depends_on:
+      - mongodb
+      - redis
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - 27018:27017
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    container_name: mongodb-prod
+  redis: 
+    image: redis:7.0
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data/cache
+    ports:
+      - 3679:3679
+    container_name: redis-prod
+volumes:
+  expense-tracker-frontend-build:
+    driver: local
+  mongo-data:
+    driver: local
+  redis-data:
+    driver: local
