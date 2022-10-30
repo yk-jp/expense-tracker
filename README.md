@@ -10,7 +10,12 @@
 
 <br>
 
-# What we learned
+# What I learned (@https://github.com/yk-jp)
+1. How nginx serves static contents and plays a role as API Gateway
+2. Why databases in docker are not generally recommended for production(I used the dockerized database for production to make configuration simpler)
+3. Why we need a WSGI HTTP Server
+4. How to optimize docker image size
+5. Deployment process using AWS
 
 The app was developed for learning purposes.
 If you have any suggestions or reviews, please message me!
