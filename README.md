@@ -10,7 +10,7 @@ Hosted version is available at [https://expense-tracker.art](https://expense-tra
 
 # Architecture
 
-<img align="center" src="./img/expenseTrackerDesign.png" alt="image" />
+<img align="center" src="./img/expenseTrackerArch.png" alt="image" />
 
 <br>
 
