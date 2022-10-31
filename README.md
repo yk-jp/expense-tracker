@@ -1,5 +1,9 @@
 # expense-tracker
 
+# Live
+Hosted version is available at [https://expense-tracker.art](https://expense-tracker.art)
+
+# Overview
 <img align="center" src="./img/expenseTracker.png" alt="image" />
 
 <br>
@@ -93,9 +97,9 @@ open
 - Gunicorn
 - Nginx
 
-### Deployment
-
-- AWS EC2
+### Infrastructure 
+- AWS EC2, ACM, Route 53, ELB 
+- Docker hub
 
 ### Testing
 
