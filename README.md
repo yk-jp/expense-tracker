@@ -29,9 +29,9 @@ Hosted version is available at [https://expense-tracker.art](https://expense-tra
 3. Understand the concept of docker and actually use it
 4. Deal with token-based authentication
 
-   The app was developed for learning purposes.
-   If you have any suggestions or reviews, please message me!
-   I want to learn more about how to design the architecture optimally and how code can be improved!
+The app was developed for learning purposes.
+If you have any suggestions or reviews, please message us!
+We want to learn more about how to design the architecture optimally and how code can be improved!
 
 ### frontend repo
 
